@@ -12,9 +12,9 @@ def solution(strings, n):
     # sum = lambda a, b: a + b
     
     # map, filter, sort 에서 장점 발휘
-    # s1 = ['banana', 'kiwi', 'apple']
-    # s4 = sorted(s1, key = lambda x : len(x), reverse = True)
-    # print(s4)
+    s1 = ['banana', 'kiwi', 'apple']
+    s4 = sorted(s1, key = lambda x : len(x), reverse = True)
+    print(s4)
     #['kiwi', 'apple', 'banana']
     
     strings.sort(key = lambda x : x[n] + x)
