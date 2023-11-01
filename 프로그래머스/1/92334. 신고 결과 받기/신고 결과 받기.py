@@ -14,10 +14,10 @@ def solution(id_list, reports, k):
         list = report.split(' ')
         
         #신고 당한 사람의 index -> repoCheck에 값 넣어줄거임
-        reporter = id_list.index(list[0])
+        police = id_list.index(list[0])
         repoIndex = id_list.index(list[1])
 
-        repoCheck[repoIndex][0].append(reporter)
+        repoCheck[repoIndex][0].append(police)
         repoCheck[repoIndex][1] += 1
         
         # if repoCheck[repoIndex][1] >= k:
@@ -25,6 +25,7 @@ def solution(id_list, reports, k):
         #     answer[police] +=1 
         #     print(answer)
     for rc in repoCheck:
+        print(rc)
         if rc[1] >= k:
             for index in rc[0]:
                 answer[index] += 1
